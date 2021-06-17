@@ -176,6 +176,24 @@ class Character extends FlxSprite
 
 				playAnim('idle');
 
+			case 'axel-spirit':
+				// HE FUCKING DIEES
+				tex = Paths.getSparrowAtlas('Axel_Spirits_assets');
+				frames = tex;
+				animation.addByPrefix('idle', 'Axel Spirit idle dance', 24);
+				animation.addByPrefix('singUP', 'Axel Spiritl Sing Note UP', 24);
+				animation.addByPrefix('singRIGHT', 'Axel Spirit Sing Note RIGHT', 24);
+				animation.addByPrefix('singDOWN', 'Axel Spirit Sing Note DOWN', 24);
+				animation.addByPrefix('singLEFT', 'Axel Spirit Sing Note LEFT', 24);
+
+				addOffset('idle', -96, -30);
+				addOffset("singUP", -103, -9);
+				addOffset("singRIGHT", -109, -41);
+				addOffset("singLEFT", -99, -15);
+				addOffset("singDOWN", -91, -45);
+
+				playAnim('idle');
+
 			case 'spooky':
 				tex = Paths.getSparrowAtlas('spooky_kids_assets');
 				frames = tex;
@@ -207,11 +225,11 @@ class Character extends FlxSprite
 				// CUZ DAVE IS DUMB!
 				animation.addByPrefix('singRIGHT', 'Mom Pose Left', 24, false);
 
-				addOffset('idle');
-				addOffset("singUP", 14, 71);
-				addOffset("singRIGHT", 10, -60);
-				addOffset("singLEFT", 250, -23);
-				addOffset("singDOWN", 20, -160);
+				addOffset('idle', 0, -20);
+				addOffset("singUP", 48, 9);
+				addOffset("singRIGHT", -32, -24);
+				addOffset("singLEFT", 4, -22);
+				addOffset("singDOWN", -3, -18);
 
 				playAnim('idle');
 
@@ -522,14 +540,14 @@ class Character extends FlxSprite
 				animation.addByPrefix('singRIGHT-alt', 'Parent Right Note Mom', 24, false);
 
 				addOffset('idle');
-				addOffset("singUP", -47, 24);
-				addOffset("singRIGHT", -1, -23);
-				addOffset("singLEFT", -30, 16);
-				addOffset("singDOWN", -31, -29);
-				addOffset("singUP-alt", -47, 24);
-				addOffset("singRIGHT-alt", -1, -24);
-				addOffset("singLEFT-alt", -30, 15);
-				addOffset("singDOWN-alt", -30, -27);
+				addOffset("singUP", -2, 1);
+				addOffset("singRIGHT", -2, 4);
+				addOffset("singLEFT", 17, 8);
+				addOffset("singDOWN", -2, 5);
+				addOffset("singUP-alt", 0, 19);
+				addOffset("singRIGHT-alt", 0, 0);
+				addOffset("singLEFT-alt", 0, 0);
+				addOffset("singDOWN-alt", 0, 0);
 
 				playAnim('idle');
 		}

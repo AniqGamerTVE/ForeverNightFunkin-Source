@@ -578,9 +578,9 @@ class PlayState extends MusicBeatState
 			case 'mall' | 'mallEvil':
 				gfVersion = 'gf-christmas';
 			case 'school':
-				gfVersion = 'gf-pixel';
+				gfVersion = 'gf';
 			case 'schoolEvil':
-				gfVersion = 'gf-pixel';
+				gfVersion = 'gf';
 		}
 
 		if (curStage == 'limo')
@@ -616,12 +616,14 @@ class PlayState extends MusicBeatState
 				camPos.x += 400;
 			case 'axel-angry':
 				camPos.x += 400;
+			case 'axel-spirit':
+				camPos.x += 400;
 			case 'pico':
 				camPos.x += 600;
 				dad.x += 120;
 				dad.y += 20;
 			case 'parents-christmas':
-				dad.x -= 500;
+				dad.x -= 300;
 			case 'senpai':
 				dad.x += 150;
 				dad.y += 360;
@@ -656,10 +658,8 @@ class PlayState extends MusicBeatState
 				dad.y -= 80;
 			case 'school':
 				boyfriend.x -= 50;
-				gf.x += 180;
-				gf.y += 300;
 			case 'schoolEvil':
-				// trailArea.scrollFactor.set();
+			    // trailArea.scrollFactor.set();
 
 				var evilTrail = new FlxTrail(dad, null, 4, 24, 0.3, 0.069);
 				// evilTrail.changeValuesEnabled(false, false, false, false);
@@ -667,10 +667,7 @@ class PlayState extends MusicBeatState
 				add(evilTrail);
 				// evilTrail.scrollFactor.set(1.1, 1.1);
 
-				boyfriend.x += 200;
-				boyfriend.y += 220;
-				gf.x += 180;
-				gf.y += 300;
+				boyfriend.x -= 50;
 		}
 
 		add(gf);
@@ -1483,7 +1480,7 @@ class PlayState extends MusicBeatState
 					case 'mom':
 						camFollow.y = dad.getMidpoint().y;
 					case 'senpai':
-						camFollow.y = dad.getMidpoint().y - 430;
+						camFollow.y = dad.getMidpoint().y - 340;
 						camFollow.x = dad.getMidpoint().x - 100;
 					case 'senpai-angry':
 						camFollow.y = dad.getMidpoint().y - 430;
